@@ -39,7 +39,7 @@ namespace RedFalcon.API.Controllers
         [HttpGet("{id}", Name = nameof(ContactsController.GetContactByIdAsync))]
         public async Task<IActionResult> GetContactByIdAsync(int id)
         {
-            var contact = await _contact.GetByIdAsync(id);
+            var contact = await _contact.GetByIdAsync(id);  
             if (contact == null)
             {
                 return NotFound();
